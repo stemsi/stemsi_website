@@ -75,7 +75,6 @@ footer {
 }
 
 .workshop {
-    background-image: linear-gradient(to bottom, rgb(66, 65, 84, 0), rgb(66, 65, 84)), url('img/placeholder-1.PNG');
     //background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('img/placeholder-1.PNG');
     width: 45%;
     height: 350px;
@@ -89,6 +88,11 @@ footer {
     background-position-x: -175px;
 }
 
+.workshop-2 {
+    background-image: linear-gradient(to bottom, rgb(66, 65, 84, 0), rgb(66, 65, 84)), url('img/outdoor-workshop-2.jpeg');
+    background-position-x: -130px;
+}
+
 .workshop span {
     color: white;
     align-self: flex-end;
@@ -99,7 +103,7 @@ footer {
 }
 
 .content-box {
-    border: solid 1px gray;
+    //border: solid 1px gray;
     padding: 30px;
     margin-bottom: 3rem;
 }
@@ -109,24 +113,25 @@ footer {
     justify-content: space-around;
 }
 
-.person {
-    max-width: 290px;
+.person-inner {
+    display: flex;
 }
 
 .person-info {
     padding: 20px;
-    border: solid 1px gray;
-    border-top: none;
+    //border: solid 1px gray;
+    //border-top: none;
 }
 
 .profile-pic {
     height: 270px;
+    width: 270px;
 }
 
-    .profile-pic.jasmin {
-        background-image: url('img/jasmin-profile-pic.jpg');
-        background-size: cover;
-    }
+.profile-pic.jasmin {
+    background-image: url('img/jasmin-profile-pic.jpg');
+    background-size: cover;
+}
 
 #partners-section {
     margin-top: 5rem;
