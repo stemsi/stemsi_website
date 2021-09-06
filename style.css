@@ -2,6 +2,39 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#nav-section {
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0px;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#main-menu-block {
+    align-items: center;
+    width: 100%;
+    margin-left: 4rem;
+}
+
+#main-menu-block > a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    height: fit-content;
+    color: black;
+    font-size: 16px;
+}
+
 body {
     margin: 0px;
 }
@@ -66,7 +99,7 @@ footer {
 }
 
 #workshops {
-    margin-top: 5rem;
+    padding-top: 7rem;
 }
 
 .workshops-container {
