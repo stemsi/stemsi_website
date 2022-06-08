@@ -10,28 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>STEM Social Innovators</title>
 </head>
 <body>
-    <section id="nav-section">
-        <section class="nav">
-            <a href="#home"><img style="max-width: 150px" src="./img/logo_black.png" alt="Alternate Text" /></a>
+    <section id="nav-section" class="topnav">
+        <div class="idc">
+            <section class="nav">
+                <a href="#home" id="logo"><img src="./img/logo_black.png" alt="Alternate Text" /></a>
+                <a href="javascript:void(0);" id="hamburger-icon" class="icon" onclick="hamburgerMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </section>
             <div id="main-menu-block" class="row">
-                <a href="#about">ABOUT US</a>
-                <a href="#workshops">WORKSHOPS</a>
-                <a href="#">JOIN THE COMMUNITY</a>
-                <a href="#">CONTACT US</a>
+                <a href="#about" onclick="clicked()">ABOUT US</a>
+                <a href="#workshops" onclick="clicked()">WORKSHOPS</a>
+                <a href="#" onclick="clicked()">JOIN THE COMMUNITY</a>
+                <a href="#" onclick="clicked()">CONTACT US</a>
             </div>
-        </section>
+        </div>
     </section>
-    <section id="home" class="content" style="padding-top: 8rem">
+    <section id="home" class="content">
         <section>
-            <div class="text-image row">
-                <div class="text col-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
+            <div class="text-image text-right row">
                 <div class="image col-7">
                     <img src="./img/hammer.jpeg" alt="" />
+                </div>
+                <div class="text col-4">
+                    <p>Founded in 2020, with a mission - to help others reach their full potential in science and technology, through interactive workshops and personalised mentoring. This is to increase the number of people entering the scientific and technical fields, whilst also helping to maintain the motivation to finish with success.</p>
                 </div>
             </div>
             <div class="text-image row">
@@ -39,7 +45,7 @@
                     <img src="./img/outdoor-workshop.jpeg" alt="" />
                 </div>
                 <div class="text col-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Our drive to help others comes from our own experience of working and studying science and technology, seeing how difficult it can be but also how incredibly rewarding. With the rapid development of technology, we also see the demand for educated people in these sectors is rising more and more every year. A demand that we would like to help by empowering those with an existing enthusiasm, as well as inspiring those who may not have previously considered an education in the technical fields.</p>
                 </div>
             </div>
         </section>
@@ -59,7 +65,7 @@
             <div class="workshops-container">
                 <div class="workshop workshop-1"><span>Folkeskole</span></div>
                 <div class="workshop workshop-2"><span>Efterskole</span></div>
-                <!--<div class="workshop workshop-3"><span>Højskole</span></div>-->
+                <!--<div class="workshop workshop-3"><span>Hï¿½jskole</span></div>-->
             </div>
         </section>
 
@@ -84,36 +90,32 @@
             </div>
         </section>
 
-        <section id="partners-section">
-            <h2>Our Partners</h2>
-            <div class="partners row">
-                <div class="partner">
-                    <img src="#" alt="" />
-                </div>
-                <div class="partner">
-                    <img src="#" alt="" />
-                </div>
-                <div class="partner">
-                    <img src="#" alt="" />
-                </div>
-                <div class="partner">
-                    <img src="#" alt="" />
-                </div>
-                <div class="partner">
-                    <img src="#" alt="" />
-                </div>
-                <div class="partner">
-                    <img src="#" alt="" />
-                </div>
-            </div>
-        </section>
     </section>
     <footer class="footer">
         <div class="footer-rows">
-            <div>CVR Number</div>
             <div>Copyright 2021 Stem Social Innovators. All rights reserved</div>
-            <div>Terms and conditions / Cookie Policy</div>
         </div>
     </footer>
 </body>
+
+<script>
+    function hamburgerMenu() {
+        let x = document.getElementById("main-menu-block");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    function clicked() {
+        let hmbg = document.getElementById('hamburger-icon');
+        let style = window.getComputedStyle(hmbg);
+        let x = document.getElementById("main-menu-block");
+        if (style.display !== "none") {
+            x.style.display = "none";
+        }
+    }
+</script>
+
 </html>

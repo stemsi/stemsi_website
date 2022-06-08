@@ -25,6 +25,8 @@ html {
     align-items: center;
     width: 100%;
     margin-left: 4rem;
+    margin-top: 2rem;
+    display: block;
 }
 
 #main-menu-block > a {
@@ -50,29 +52,23 @@ body {
 }
 
 .text-image {
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 4rem;
 }
 
-.image {
-    width: 60%;
-}
-
-    .image > img {
-        width: 100%;
-    }
 
 .text {
-    //border: solid 1px gray;
     padding: 1.5rem;
-    width: 30%;
+    text-align: justify;
 }
 
-    .text > p {
-        margin-top: 5rem;
-    }
+.image > img {
+    width: 100%;
+}
 
 footer {
+    margin-top: 2rem;
     height: 10rem;
     background-color: #424154;
 }
@@ -168,4 +164,122 @@ footer {
 
 #partners-section {
     margin-top: 5rem;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+}
+
+#main-menu-block {
+    display: none;
+}
+
+.topnav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 32px;
+    display: block;
+}
+
+.topnav a.icon {
+    padding-top: 1.5rem;
+    color:gray;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    color: black;
+}
+
+#logo img {
+    max-width: 100px;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.content {
+    width: 100%;
+}
+
+.content section {
+    padding-top: 2rem;
+}
+
+@media screen and (max-width: 759px) {
+    #main-menu-block {
+        height: 100vh;
+    }
+
+    .nav {
+        box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    }
+}
+
+@media screen and (min-width: 760px) {
+    #main-menu-block {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-left: 4rem;
+    }
+
+    #main-menu-block > a {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        height: fit-content;
+        color: black;
+        font-size: 16px;
+    }
+
+    #logo img {
+        max-width: 150px;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+
+    .idc {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+
+    .text-image {
+        flex-direction: row;
+    }
+
+    .text-right .image {
+        order: 2;
+    }
+    .text-right .text {
+        order: 1;
+    }
+
+    .text {
+    //border: solid 1px gray;
+        padding: 1.5rem;
+        width: 30%;
+    }
+
+    .text > p {
+        margin-top: 5rem;
+    }
+
+    .image {
+        width: 60%;
+    }
+
+    .content {
+        padding-top: 8rem
+    }
 }
